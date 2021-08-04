@@ -9,13 +9,17 @@ public class App {
     
     Scanner sc = new Scanner(System.in);
 
-    int num = sc.nextInt();
+    StringBuilder build = new StringBuilder();
 
-    StringBuilder str = new StringBuilder();
+    int n = sc.nextInt();
 
-    str.append((num < 0) ? "отрицательное" : "положительное");
-    str.append((num % 2 == 0) ? " четное" : " нечетное");
+    if (n > 0 & n < 1000) {
 
-    System.out.println(num != 0 ? str + " число" : "ноль");
+      int l = String.valueOf(n).length();
+
+      build.append((n % 2 == 0) ? "четное " : "нечетное ");
+      build.append(l == 1 ? "однозначное" : l == 2 ? "двузначное" : "трехзначное");
+      System.out.println(build.toString() + " число");
+    }
   }
 }
