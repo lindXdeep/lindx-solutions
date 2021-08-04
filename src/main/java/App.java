@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-=======
 import java.util.Scanner;
 
->>>>>>> 001-Переходим_дорогу_вслепую
-/**
- * App
- */
 public class App {
 
   public static void main(String[] args) {
-<<<<<<< HEAD
-    System.out.println("init javarush");
-=======
 
     System.out.println(check(getMinute()));
 
@@ -28,6 +19,5 @@ public class App {
 
   private static float getMinute() {
     return new Scanner(System.in).nextFloat();
->>>>>>> 001-Переходим_дорогу_вслепую
   }
 }
