@@ -6,15 +6,16 @@ import java.util.Scanner;
 public class App {
 
   public static void main(String[] args) {
-
+    
     Scanner sc = new Scanner(System.in);
 
-    String name = sc.next();
-    int age = sc.nextInt();
+    int a = sc.nextInt();
+    int b = sc.nextInt();
 
-    if (age > 20) {
-      System.out.println("И 18-ти достаточно");
-    }
-
+    System.out.println(
+      (a > 0 & b > 0) ? 1 :
+      (a<0 & b> 0)? 2 :
+      (a < 0 & b < 0) ? 3 : 4
+    );
   }
 }
