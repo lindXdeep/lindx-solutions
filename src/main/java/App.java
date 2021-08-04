@@ -9,13 +9,13 @@ public class App {
     
     Scanner sc = new Scanner(System.in);
 
-    int a = sc.nextInt();
-    int b = sc.nextInt();
+    int num = sc.nextInt();
 
-    System.out.println(
-      (a > 0 & b > 0) ? 1 :
-      (a<0 & b> 0)? 2 :
-      (a < 0 & b < 0) ? 3 : 4
-    );
+    StringBuilder str = new StringBuilder();
+
+    str.append((num < 0) ? "отрицательное" : "положительное");
+    str.append((num % 2 == 0) ? " четное" : " нечетное");
+
+    System.out.println(num != 0 ? str + " число" : "ноль");
   }
 }
