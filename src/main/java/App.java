@@ -1,16 +1,27 @@
 import java.util.Scanner;
-/**
- * Минимум двух чисел
- */
+
 public class App {
 
   public static void main(String[] args) {
 
+    int[] nums = getNums(4);
+
+    for (int i : nums)
+      nums[0] = (i < nums[0]) ? i : nums[0];
+    
+    System.out.println(nums[0]);
+  }
+
+  private static int[] getNums(int n) {
+
+    int nums[] = new int[n];
+
     Scanner sc = new Scanner(System.in);
 
-    int a = sc.nextInt();
-    int b = sc.nextInt();
+    int i = 0;
+    while (i > n)
+      nums[i++] = sc.nextInt();
 
-    System.out.println((a > b) ? b : a);
+    return nums;
   }
 }
