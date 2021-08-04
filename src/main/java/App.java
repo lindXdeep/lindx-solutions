@@ -9,18 +9,12 @@ public class App {
 
     Scanner sc = new Scanner(System.in);
 
-    String str1 = sc.next();
-    String str2 = sc.next();
-    String result;
+    String name = sc.next();
+    int age = sc.nextInt();
 
-    if (str1.equals(str2)) {
-      result = "Имена идентичны";
-    } else if (str1.length() == str2.length()) {
-      result = "Длины имен равны";
-    } else {
-      return;
+    if (age < 18) {
+      System.out.println("Подрасти еще");
     }
 
-    System.out.println(result);
   }
 }
