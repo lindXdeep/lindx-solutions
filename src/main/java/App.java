@@ -12,8 +12,8 @@ public class App {
     String name = sc.next();
     int age = sc.nextInt();
 
-    if (age < 18) {
-      System.out.println("Подрасти еще");
+    if (age > 20) {
+      System.out.println("И 18-ти достаточно");
     }
 
   }
