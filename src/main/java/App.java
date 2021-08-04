@@ -4,12 +4,24 @@ public class App {
 
   public static void main(String[] args) {
 
-    int[] nums = getNums(4);
+    int[] nums = getNums(3);
 
-    for (int i : nums)
-      nums[0] = (i < nums[0]) ? i : nums[0];
-    
-    System.out.println(nums[0]);
+    int size = nums.length;
+
+    for (int i = 0; i < size; i++) {
+      for (int j = i; j < size; j++) {
+        if (nums[i] < nums[j]) {
+          int tmp = nums[i];
+          nums[i] = nums[j];
+          nums[j] = tmp;
+        }
+      }
+    }
+
+    for (int i : nums) {
+      System.out.print(i + " ");
+    }
+
   }
 
   private static int[] getNums(int n) {
@@ -19,7 +31,7 @@ public class App {
     Scanner sc = new Scanner(System.in);
 
     int i = 0;
-    while (i > n)
+    while (i < n)
       nums[i++] = sc.nextInt();
 
     return nums;
